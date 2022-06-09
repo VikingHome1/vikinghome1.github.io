@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <title>Home</title>
-  <style>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-.class1{
-  a {
-    color: green;
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("bg21.png");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  a{
     text-decoration: none;
   }
+  a:hover{
+  text-decoration: underline;}
+}
+</style>
+</head>
+<body>
 
-  a:hover {
-    color: darkgreen;
-    text-decoration: none;
-    }
-  </style>
-<body style="background-color:black">
-<div class="class1">
-  <pre style="color:white;">
-<a href="https://tryhackme.com/p/VikingHome1">TryHackMe</a> :)
-</pre>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2>Blurred Background</h2>
+  <h1 style="font-size:50px">Vikinghome1</h1>
+  <a href="https://tryhackme.com/p/VikingHome1">TryHackMe</a>
 </div>
+
 </body>
 </html>
+/* literally just taken from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blurred_bg with a few things changed because i am lazy */
