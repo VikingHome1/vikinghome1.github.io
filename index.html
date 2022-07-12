@@ -53,8 +53,19 @@ body, html {
   text-decoration:none;
   }
   a:hover{
-  color:#eeed;
+  color:#eeeedd;
   text-decoration:underline;
+  }
+  /* Scale from center */
+  li:nth-child(3) a::after {
+    opacity 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  li:nth-child(3) a:hover::after,
+  li:nth-child(3) a:focus::after{
+    transform: scale(1);
   }
 </style>
 </head>
@@ -64,11 +75,7 @@ body, html {
 
 <div class="bg-text">
   <h1>VikingHome1</h1>
-  <a href="https://github.com/vikinghome1">github.vh1</a>
-  
-  <a href="https://tryhackme.com/p/VikingHome1">tryhackme.vh1</a>
-  
-  <a href="./rss.html">RSS feeds</a>
+  <a href="https://github.com/vikinghome1">github.vh1</a>   <a href="https://tryhackme.com/p/VikingHome1">tryhackme.vh1</a>   <a href="./rss.html">RSS feeds</a>
 </div>
 
 </body>
